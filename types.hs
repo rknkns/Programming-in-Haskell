@@ -303,3 +303,14 @@ pyths n = [(x,y,z) | x <- [1..n], y <- [1..n], z <- [1..n], z ^ 2 == x ^ 2 + y ^
 ---Six!!!!!!---
 perfects :: Int -> [Int]
 perfects n = [y | y <- [1..n], (sum (factors y)) == y * 2]
+
+---Seven!!!!!!!---
+mkPair :: Int -> Int -> (Int, Int)
+mkPair x y = (x, y)
+
+sevena = [mkPair x y | x <- [1,2], y <- [3,4]]
+
+mkPair2 :: Int -> [(Int, Int)]
+mkPair2 x = [mkPair x y | y <- [3,4] ]
+
+sevenb = [mkPair2 x | x <- [1,2]]
